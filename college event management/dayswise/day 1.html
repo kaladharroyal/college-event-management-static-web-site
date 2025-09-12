@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Schedule</title>
+    <link rel="stylesheet" href="../eventschedule/event-schedule.css" type="text/css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/backgroundnew.jpeg') no-repeat center center/cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .collegelogo img {
+            height: 60px;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .collegelogo img:hover {
+            transform: scale(1.05);
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        .menu ul li a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+        }
+        .menu ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: goldenrod;
+            transition: width 0.3s;
+        }
+        .menu ul li a:hover::after {
+            width: 100%;
+        }
+        .container {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .container h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: goldenrod;
+        }
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        .event-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .event-list li {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .event-list li:hover {
+            transform: scale(1.02);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        .event-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #ffc107;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .btn {
+            background-color: goldenrod;
+            color: black;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="collegelogo">
+            <a href="../home/index.html">
+                <img src="../images/logo modified.jpg" alt="College Logo">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../eventschedule/eventschedule.html">Event Schedule</a></li>
+                <li><a href="../activities/activities.html">Activities</a></li>
+                <li><a href="../contact us/contact us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Welcome to the Event!</h1>
+        <h2>Day 1 Event Schedule</h2>
+        <ul class="event-list">
+            <li>
+                <span class="event-title">Inauguration Ceremony</span>
+                Time: 10:00 AM - 12:00 PM<br>
+                Location: Main Auditorium
+            </li>
+            <li>
+                <span class="event-title">Hackathon & Workshop on AI</span>
+                Time: 1:00 PM - 6:00 PM<br>
+                Location: Computer Lab
+            </li>
+            <li>
+                <span class="event-title">Cultural Night</span>
+                Time: 7:00 PM - 10:00 PM<br>
+                Location: Auditorium
+            </li>
+        </ul>
+        <button class="btn" onclick="location.href='../eventschedule/eventschedule.html'">Back to Event Schedule Page</button>
+    </div>
+</body>
+</html>
