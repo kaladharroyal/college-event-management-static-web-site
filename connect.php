@@ -31,7 +31,7 @@ if ($full_name==='' || $gender==='' || $year<1 || $year>5 ||
 // DB connection
 $servername = 'localhost';
 $username   = 'kaladhar';       // or 'root' if using default XAMPP
-$password   = 'Kaladhar@011';   // empty string "" if root has no password
+$password   = '';   // empty string "" if root has no password
 $dbname     = 'college';
 
 try {
@@ -45,7 +45,7 @@ try {
     $stmt->bind_param('ssissss', $full_name, $gender, $year, $branch, $college_name, $reg_number, $participation_for);
     $stmt->execute();
 
-    // Redirect to a success page
+    // Redirect to success page
     header('Location: success.html');
     exit;
 } catch (mysqli_sql_exception $e) {
